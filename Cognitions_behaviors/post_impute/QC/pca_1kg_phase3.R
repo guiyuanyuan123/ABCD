@@ -50,3 +50,4 @@ legend("bottomleft",ncol=6,cex=.7,pt.lwd=c(1,rep(1.5,47)),inset=c(0,0),
 #,text.width=0.014
 #text(cex=1,a$V5[2535],a$V4[2535]-.005,labels=c("Sardinia"))
 dev.off()
+
