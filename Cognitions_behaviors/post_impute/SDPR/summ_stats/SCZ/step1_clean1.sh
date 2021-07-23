@@ -1,4 +1,4 @@
-awk '(NR>1){SNP=$2;A1=$4;A2=$5;INFO=$8;BETA=log($9);P=$11;N=4*33426*32541/(33426+32541)}(NR==1){printf "SNP	A1	A2	INFO	BETA	P	N"}{print SNP"\t"A1"\t"A2"\t"INFO"\t"BETA"\t"P"\t"N}' sczvscont-sumstat > clean1.txt
+awk '(NR>1){SNP=$2;A1=$4;A2=$5;INFO=$8;BETA=log($9);P=$11;N=4*33426*32541/(33426+32541)}(NR==1){printf "SNP\tA1\tA2\tINFO\tBETA\tP\tN"}{print SNP"\t"A1"\t"A2"\t"INFO"\t"BETA"\t"P"\t"N}' sczvscont-sumstat > clean1.txt
 ~/tools/ldsc/munge_sumstats.py --sumstats clean1.txt --out clean
 #qc
 ~/tools/ldsc/ldsc.py --h2 clean.sumstats.gz --ref-ld-chr  ~/ABCD_ADHD/abcd_ksad01/input_loose/all_sample/impute_data/keep_EUR/LDSC/ADHD/LD_eur/eur_w_ld_chr/ --out clean_h2 --w-ld-chr  ~/ABCD_ADHD/abcd_ksad01/input_loose/all_sample/impute_data/keep_EUR/LDSC/ADHD/LD_eur/eur_w_ld_chr/
