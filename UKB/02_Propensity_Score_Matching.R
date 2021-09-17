@@ -48,8 +48,9 @@ f<-lm(df_2[,4] ~ df_2$pscore)$residuals
  
  #all_fluid
  c=merge(a,dem,by="f.eid")
- write.table(d,"test",quote=F,row.names=F)
- awk '{if($12!="NA"){$12=$12}if($12=="NA" && $13!="NA"){$12=$13}if($12=="NA" && $13=="NA" && $14!="NA"){$12=$14}if($12=="NA" && $13=="NA" && $14=="NA" && $15!="NA"){$12=$15};print}' test \
- |awk '$12!="-3" && $12!="-7"{print $1,$2,$12}' > test2
- awk '{if($3!="1" && $3!="f.6138.0.0"){$3=0}}1' test2 > test3
- 
+ d=c[,c(1:11,20,26,32,38)]
+ write.table(d,"EA1",quote=F,row.names=F)
+ awk '{if($12!="NA"){$12=$12}if($12=="NA" && $13!="NA"){$12=$13}if($12=="NA" && $13=="NA" && $14!="NA"){$12=$14}if($12=="NA" && $13=="NA" && $14=="NA" && $15!="NA"){$12=$15};print}' EA1 \
+ |awk '$12!="-3" && $12!="-7"{print $1,$2,$12}' > EA2
+ awk '{if($3!="1" && $3!="f.6138.0.0"){$3=0}}1' EA2 > EA3
+
