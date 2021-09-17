@@ -1,0 +1,26 @@
+
+e=c[,c()]
+awk '$12!="NA"'
+
+
+f=pd.read_csv("/home/johntan/Downloads/TDI2_f",sep='\\s+',header=0)
+#sns.distplot(data["f.189.0.0"],color = "#D86457")
+df=f['f.189.0.0']+6.26
+stats.boxcox_normmax(df)
+x = stats.boxcox(df,stats.boxcox_normmax(df))
+sns.distplot(x,color = "#D86457")
+stats.kstest(x,'norm',(x.mean(),x.std()))
+#np.savetxt('/home/johntan/Downloads/TDI2_f_trans',x)
+#stats.anderson(x, dist='norm')
+
+m=pd.read_csv("/home/johntan/Downloads/TDI2_m",sep='\\s+',header=0)
+#sns.distplot(data["f.189.0.0"],color = "#D86457")
+dm=m['f.189.0.0']+6.26
+stats.boxcox_normmax(dm)
+y = stats.boxcox(dm,stats.boxcox_normmax(dm))
+sns.distplot(y,color = "yellow")
+stats.kstest(y,'norm',(y.mean(),y.std()))
+np.savetxt('/home/johntan/Downloads/TDI2_m_trans',y)
+
+
+#直接取log也过不了正太检验，用wilcox.test  p=6.53e-15 f>m
