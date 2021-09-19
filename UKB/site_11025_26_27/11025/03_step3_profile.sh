@@ -11,6 +11,6 @@ sed -i 's/scz/bd1/g' BD1_step3_profile.sh
 sed -i 's/scz/bd2/g' BD2_step3_profile.sh 
 sed -i 's/scz/mdd/g' MDD_step3_profile.sh 
 sed -i 's/scz/asd/g' ASD_step3_profile.sh 
-sed -i 's|~/measures/SDPR/MDD/mdd${i}|~/measures/SDPR/MDD/MDD_short/mdd${i}|g' MDD_step3_profile.sh 
+sed -i 's|~/measures/SDPR/MDD/mdd${i}|~/measures/SDPR/MDD/MDD_short/mdd10|g' MDD_step3_profile.sh 
 
 for i in `cat test`;do echo "nohup sh ${i}_step3_profile.sh &";done
