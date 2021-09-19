@@ -9,7 +9,6 @@
 /export/home/guiyuanyuan/tools/plink2 --bfile chr${i}_5 --hwe 1e-10 --make-bed --out 11025_qc --threads 5 --memory 35840 ;
 rm chr${i}_*.bed chr${i}_*.bim chr${i}_*.fam chr${i}_*.log;
 
-data=11025
 
 Rscript mismatch.R
 #11025.mismatch
