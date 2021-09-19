@@ -1,7 +1,7 @@
 j=20
 path2=paste("/export/home/guiyuanyuan/UKB/brain_imaging/notask_fmri/site_54/11025_Cheadle/SCZ",j,"/SCZ.profile",sep="")
 path3=paste("/export/home/guiyuanyuan/UKB/brain_imaging/notask_fmri/site_54/11025_Cheadle/BD",j,"/BD.profile",sep="")
-path4=paste("/export/home/guiyuanyuan/UKB/brain_imaging/notask_fmri/site_54/11025_Cheadle/MDD",j,"/MDD.profile",sep="")
+path4=paste("/export/home/guiyuanyuan/UKB/brain_imaging/notask_fmri/site_54/11025_Cheadle/MDD10/MDD.profile",sep="")
 path5=paste("/export/home/guiyuanyuan/UKB/brain_imaging/notask_fmri/site_54/11025_Cheadle/ASD",j,"/ASD.profile",sep="")
 path6=paste("/export/home/guiyuanyuan/UKB/brain_imaging/notask_fmri/site_54/11025_Cheadle/BD1",j,"/BD1.profile",sep="")
 path7=paste("/export/home/guiyuanyuan/UKB/brain_imaging/notask_fmri/site_54/11025_Cheadle/BD2",j,"/BD2.profile",sep="")
